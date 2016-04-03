@@ -7896,4 +7896,13 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+.outer-wrapper {
+  background-color: #000000; }
+
+.container {
+  background-color: #F70029; }
+
+body {
+  background-color: #A700F7; }
+
 /*# sourceMappingURL=main.css.map */

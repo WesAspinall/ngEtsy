@@ -16,6 +16,11 @@ var htmlhint = require('gulp-htmlhint');
 var jscs = require('gulp-jscs');
 var watch = require('gulp-watch'); // A Better File Watcher
 
+// Set up Foundation
+var path = require('path');
+var foundationEntry = require.resolve('foundation-sites');
+var foundationSCSS = path.join(foundationEntry, '..', '..', '..', 'scss');
+
 // Set up Bootstrap
 var bootstrapEntry = require.resolve('bootstrap-sass');
 var bootstrapSCSS = path.join(bootstrapEntry, '..', '..', 'stylesheets');

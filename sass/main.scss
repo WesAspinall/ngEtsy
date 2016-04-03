@@ -2,3 +2,30 @@
 // See Readme for a list of supported ones
 @import 'font-awesome';
 @import 'bootstrap';
+
+//colors
+$tan    	: #F5F5F1;
+$orange 	: #F76400;
+$aqua   	: #2BA8C6;
+$red    	: #F70029;
+$yellow 	: #F4CE00;
+$green  	: #00C400;
+$blue   	: #00CCF5;
+$purple 	: #A700F7;
+$black  	: #000000;
+$white      : #ffffff;
+$darkgrey   : #666666;
+$lightgrey  : #777777;
+
+
+.outer-wrapper{
+	background-color: $black;
+}
+
+.container{
+	background-color: $red;
+}
+
+body{
+	background-color: $purple;
+}
