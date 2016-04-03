@@ -7896,26 +7896,112 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-.outer-wrapper, #bs-example-navbar-collapse-1, .container-fluid {
-  background-color: #ffffff; }
+.outer-wrapper {
+  background-color: #F5F5F1; }
 
 .homeTemplateContainer {
-  background-color: #F5F5F1; }
+  background-color: #F5F5F1;
+  max-width: 980px;
+  margin: 0 auto; }
 
 body {
   background-color: #F5F5F1;
   width: 100%;
   padding: 0;
-  margin: 0;
-  position: relative; }
+  margin: 0; }
 
-form {
-  display: block;
-  position: absolute;
-  top: 1em;
-  left: 10em; }
+#bs-example-navbar-collapse-1, .container-fluid {
+  background-color: #ffffff; }
 
-.listingUL li {
-  display: inline-block; }
+.navbar-brand {
+  padding-left: 4em;
+  font-size: 1.3em; }
+
+#logo {
+  color: #F76400;
+  text-shadow: 1px 1px 1px #777777; }
+
+.formContainer {
+  width: 100%;
+  text-align: center; }
+  .formContainer form {
+    width: 100%;
+    text-align: center; }
+    .formContainer form .form-control {
+      width: 20em;
+      display: inline-block; }
+
+.resultsContainer {
+  background-color: #F6C3A1;
+  text-align: center;
+  border: 1px solid #777777;
+  border-radius: 3px;
+  padding: 1em;
+  width: 100%;
+  margin: 0 auto; }
+  .resultsContainer h1 {
+    margin-top: 0; }
+
+.welcomeCard {
+  background-color: #F6C3A1; }
+  .welcomeCard h1 {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    font-size: 3em; }
+
+.listingCardWrapper {
+  padding: 1em;
+  text-align: left; }
+  .listingCardWrapper img {
+    border: 1px solid #777777;
+    border-radius: 3px; }
+  .listingCardWrapper .listingTitle {
+    text-align: center;
+    width: 90%;
+    font-weight: bold;
+    background-color: #ffffff; }
+  .listingCardWrapper .listingUL {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    list-style: none; }
+    .listingCardWrapper .listingUL li {
+      display: inline-block;
+      text-align: center;
+      font-size: .9em; }
+
+.listingCard {
+  border: 1px solid #777777;
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px black;
+  padding-top: .3em; }
+
+#listingShopName {
+  color: #777777;
+  text-align: left; }
+
+#listingPrice {
+  color: #76C239;
+  text-align: right;
+  float: right; }
+
+#quantity {
+  font-weight: bold; }
+
+#allCategories {
+  color: #2BA8C6; }
+
+#allCategories:hover {
+  text-decoration: underline; }
+
+.etsyHeader span {
+  font-size: 4em;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #777777;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white; }
 
 /*# sourceMappingURL=main.css.map */
