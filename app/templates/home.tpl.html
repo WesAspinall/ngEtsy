@@ -1,0 +1,14 @@
+
+	<form ng-submit="vm.search(query)">
+			  <input type="text" placeholder="Search" ng-model="query">
+		<button>Submit</button>
+	</form>
+
+	<ul class="listingUL">
+		<li ng-repeat="listing in vm.listings" ng-show="listing" class="col-lg-3 col-md-4 col-xs-6 thumb">
+			{{listing.title}}
+		</li>
+		<li ng-hide="vm.blank">
+			no results</li>
+	</ul>
+</div>

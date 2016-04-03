@@ -1,21 +1,28 @@
-let HomeController = function($scope, $http){
-
+let HomeController = function($scope, $http, $timeout){
+	let vm = this;
 	let etsyURL = 'https://openapi.etsy.com/v2/listings/active.js?api_key=3nk0gcxgoph1wphq6dwkukxq&includes=Images,Shop';
-  
-	$scope.search = (query) =>{
+
+	vm.listings = [];
+	vm.search = search;
+
+
+//$timeout lets angular know that the value of listings has changed
+function search(query){
 		$.ajax({
 		  url: etsyURL+ '&keywords=' + query+";",
 		  dataType: 'jsonp',
 		  method: 'get'
 		}).then (function (res) {
-			$scope.listings = res.results;
-			console.log($scope.listings);
+			$timeout (function(){
+				vm.listings=res.results;
+				console.log(vm.listings)
+			});
 		});
 	}
 
-
 };
 
-HomeController.$inject = ['$scope', '$http'];
+
+HomeController.$inject = ['$scope', '$http', '$timeout'];
 
 export default HomeController;

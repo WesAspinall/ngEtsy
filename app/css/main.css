@@ -7900,12 +7900,22 @@ button.close {
   background-color: #ffffff; }
 
 .homeTemplateContainer {
-  background-color: #F70029; }
+  background-color: #F5F5F1; }
 
 body {
   background-color: #F5F5F1;
   width: 100%;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  position: relative; }
+
+form {
+  display: block;
+  position: absolute;
+  top: 1em;
+  left: 10em; }
+
+.listingUL li {
+  display: inline-block; }
 
 /*# sourceMappingURL=main.css.map */

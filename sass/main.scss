@@ -23,7 +23,7 @@ $lightgrey  : #777777;
 }
 
 .homeTemplateContainer{
-	background-color: $red;
+	background-color: $tan;
 }
 
 body{
@@ -31,4 +31,18 @@ body{
 	width: 100%;
 	padding: 0;
 	margin: 0;
+	position: relative;
+}
+
+form{
+	display: block;
+	position: absolute;
+	top: 1em;
+	left: 10em;
+}
+
+.listingUL{
+	li{
+		display: inline-block;	
+	}
 }

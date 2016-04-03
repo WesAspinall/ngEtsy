@@ -16,7 +16,6 @@ var config = function config($stateProvider, $urlRouterProvider) {
   // manage our layout that will be on all child states
   .state('root', {
     abstract: true,
-    controller: 'HomeController as vm',
     templateUrl: 'templates/layout.tpl.html'
   })
   // Home State
@@ -39,23 +38,29 @@ module.exports = exports['default'];
 Object.defineProperty(exports, '__esModule', {
 	value: true
 });
-var HomeController = function HomeController($scope, $http) {
-
+var HomeController = function HomeController($scope, $http, $timeout) {
+	var vm = this;
 	var etsyURL = 'https://openapi.etsy.com/v2/listings/active.js?api_key=3nk0gcxgoph1wphq6dwkukxq&includes=Images,Shop';
 
-	$scope.search = function (query) {
+	vm.listings = [];
+	vm.search = search;
+
+	//$timeout lets angular know that the value of listings has changed
+	function search(query) {
 		$.ajax({
 			url: etsyURL + '&keywords=' + query + ";",
 			dataType: 'jsonp',
 			method: 'get'
 		}).then(function (res) {
-			$scope.listings = res.results;
-			console.log($scope.listings);
+			$timeout(function () {
+				vm.listings = res.results;
+				console.log(vm.listings);
+			});
 		});
-	};
+	}
 };
 
-HomeController.$inject = ['$scope', '$http'];
+HomeController.$inject = ['$scope', '$http', '$timeout'];
 
 exports['default'] = HomeController;
 module.exports = exports['default'];

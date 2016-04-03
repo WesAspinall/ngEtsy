@@ -10,7 +10,6 @@ let config = function($stateProvider, $urlRouterProvider) {
     // manage our layout that will be on all child states
     .state('root', {
       abstract: true,
-      controller: 'HomeController as vm',
       templateUrl: 'templates/layout.tpl.html'
     })
     // Home State
