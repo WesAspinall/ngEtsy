@@ -44,6 +44,7 @@ var HomeController = function HomeController($scope, $http, $timeout) {
 
 	vm.listings = [];
 	vm.search = search;
+	vm.blank = true;
 
 	//$timeout lets angular know that the value of listings has changed
 	function search(query) {
@@ -55,6 +56,7 @@ var HomeController = function HomeController($scope, $http, $timeout) {
 			$timeout(function () {
 				vm.listings = res.results;
 				console.log(vm.listings);
+				vm.blank = false;
 			});
 		});
 	}
