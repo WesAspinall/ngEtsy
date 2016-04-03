@@ -18,14 +18,17 @@ $darkgrey   : #666666;
 $lightgrey  : #777777;
 
 
-.outer-wrapper{
-	background-color: $black;
+.outer-wrapper, #bs-example-navbar-collapse-1, .container-fluid{
+	background-color: $white;
 }
 
-.container{
+.homeTemplateContainer{
 	background-color: $red;
 }
 
 body{
-	background-color: $purple;
+	background-color: $tan;
+	width: 100%;
+	padding: 0;
+	margin: 0;
 }

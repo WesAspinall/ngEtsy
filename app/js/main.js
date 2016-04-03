@@ -33,15 +33,28 @@ exports['default'] = config;
 module.exports = exports['default'];
 
 },{}],2:[function(require,module,exports){
-"use strict";
+'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-	value: true
+Object.defineProperty(exports, '__esModule', {
+  value: true
 });
-var HomeController = function HomeController() {};
+var HomeController = function HomeController($scope, $http) {
 
-exports["default"] = HomeController;
-module.exports = exports["default"];
+  var url = 'https://openapi.etsy.com/v2/listings/active.js?api_key=3nk0gcxgoph1wphq6dwkukxq&includes=Images,Shop';
+
+  $scope.search = function (query) {
+    $http.get(url + '&keywords=' + query + ";").then(function (res) {
+      $scope.listings = res.data;
+
+      console.log($scope.listings);
+    });
+  };
+};
+
+HomeController.$inject = ['$scope', '$http'];
+
+exports['default'] = HomeController;
+module.exports = exports['default'];
 
 },{}],3:[function(require,module,exports){
 'use strict';

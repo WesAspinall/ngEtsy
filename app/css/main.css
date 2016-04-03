@@ -7896,13 +7896,16 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-.outer-wrapper {
-  background-color: #000000; }
+.outer-wrapper, #bs-example-navbar-collapse-1, .container-fluid {
+  background-color: #ffffff; }
 
-.container {
+.homeTemplateContainer {
   background-color: #F70029; }
 
 body {
-  background-color: #A700F7; }
+  background-color: #F5F5F1;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
 
 /*# sourceMappingURL=main.css.map */
