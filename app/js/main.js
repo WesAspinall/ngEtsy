@@ -16,6 +16,7 @@ var config = function config($stateProvider, $urlRouterProvider) {
   // manage our layout that will be on all child states
   .state('root', {
     abstract: true,
+    controller: 'HomeController as vm',
     templateUrl: 'templates/layout.tpl.html'
   })
   // Home State
@@ -36,19 +37,22 @@ module.exports = exports['default'];
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
-  value: true
+	value: true
 });
 var HomeController = function HomeController($scope, $http) {
 
-  var url = 'https://openapi.etsy.com/v2/listings/active.js?api_key=3nk0gcxgoph1wphq6dwkukxq&includes=Images,Shop';
+	var etsyURL = 'https://openapi.etsy.com/v2/listings/active.js?api_key=3nk0gcxgoph1wphq6dwkukxq&includes=Images,Shop';
 
-  $scope.search = function (query) {
-    $http.get(url + '&keywords=' + query + ";").then(function (res) {
-      $scope.listings = res.data;
-
-      console.log($scope.listings);
-    });
-  };
+	$scope.search = function (query) {
+		$.ajax({
+			url: etsyURL + '&keywords=' + query + ";",
+			dataType: 'jsonp',
+			method: 'get'
+		}).then(function (res) {
+			$scope.listings = res.results;
+			console.log($scope.listings);
+		});
+	};
 };
 
 HomeController.$inject = ['$scope', '$http'];
